@@ -30,6 +30,15 @@ QString MyDLL::MakeTxt(QString g_text)
     return g_text;
 }
 
+//class himself
+Info::Info ()
+{
 
+}
+// class with point to function show_message and some string parameters
+void Info::show_message(QString g_msgtype, QString g_msgtxt)
+{
+    QMessageBox::about(nullptr, g_msgtype, g_msgtxt);
+}
 
 

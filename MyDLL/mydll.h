@@ -19,5 +19,15 @@ public:
     static QString MakeTxt(QString g_text);
 
 };
+// we define here class with parameter export
+class MYDLL_EXPORT Info
+{
+
+public:
+    // this is class himself
+    Info();
+    // a function without return value and parameters with public access
+    static void show_message(QString g_msgtype, QString g_msgtxt);
+};
 
 #endif // MYDLL_H
