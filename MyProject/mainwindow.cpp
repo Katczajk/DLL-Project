@@ -4,7 +4,12 @@
 #include <QLineEdit>
 // header declaired for DLL to access class & functions
 #include "../MyDLL/mydll.h"
-
+#include <QDnsLookup>
+#include <QHostAddress>
+#include <QtGlobal>
+#include "inttypes.h"
+#include "string.h"
+#include <QList>
 
 MainWindow::MainWindow(QWidget *parent)
     : QMainWindow(parent)
@@ -45,4 +50,40 @@ void MainWindow::pushToLabel(QString input)
     // in every part of program u can now use to submit user
     // some msgbox with text
     // define all in dll file with
+
+    // QDnsLookup::QDnsLookup(QDnsLookup::A,"google.de", Q_NULLPTR);
+    // needs to have an object about QDnsLookup
+    QString nsanswer;
+    QString ipaddr = "194.25.2.129";
+
+    // quint32 int_host = QHostAddress::toIPv4Address('192.168.1.1') const;
+    quint32 fullip = ipaddr.toUInt();
+    QDnsLookup dnslookup;
+
+    QHostAddress l_hostadd;
+    l_hostadd.setAddress(fullip);
+
+    dnslookup.setType(QDnsLookup::A);
+    dnslookup.setName("google.de");
+    dnslookup.setNameserver(l_hostadd.AnyIPv4);
+
+    // dnslookup.setNameserver("");
+
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
