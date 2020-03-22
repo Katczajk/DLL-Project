@@ -11,6 +11,9 @@ class MainWindow : public QMainWindow
 {
     Q_OBJECT
 
+    const QString l_msgtype = "Info";
+    const QString l_msgtxt = "Button is pressed";
+
 public:
     MainWindow(QWidget *parent = nullptr);
     ~MainWindow();
