@@ -4,7 +4,7 @@ greaterThan(QT_MAJOR_VERSION, 4): QT += widgets
 
 CONFIG += c++11
 
-LIBS += "C:/Users/hermann/Documents/Qt_Projects/build-MyProject-Desktop_Qt_5_9_9_MinGW_32bit-Debug/debug/MyDLL.dll"
+LIBS += "C:/Users/Rico/Documents/GitHub/DLL-Project/build-MyDLL-Desktop_Qt_5_9_9_MinGW_32bit-Debug/debug/MyDLL.dll"
 
 # The following define makes your compiler emit warnings if you use
 # any Qt feature that has been marked deprecated (the exact warnings
